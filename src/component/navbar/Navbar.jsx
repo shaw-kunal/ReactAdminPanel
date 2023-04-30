@@ -2,17 +2,34 @@ import { ChatBubbleOutlineOutlined, DarkModeOutlined, FullscreenExitOutlined, La
 import { Avatar, AvatarGroup, ListItemAvatar } from '@mui/material'
 import React from 'react'
 import "./navbar.scss"
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <div className='navbar'>
       <div className="navbarWrapper">
+
+
+        <div className='pages'>
+          <div className='pageItem'>
+            <Link to="/" className='pageLink'>
+              <h3>Home</h3>
+              <div className='pageline'></div>
+            </Link>
+          </div>
+          <div className='pageItem'>
+            <Link to="/users" className='pageLink'>
+              <h3>users</h3>
+            </Link>
+          </div>
+        </div>
         <div className="search">
           <div className="searchfield">
             <input type="text" placeholder='search...' />
             <SearchOutlined className='icon' />
           </div>
         </div>
+
         <div className="items">
           <div className="item"><LanguageOutlined className='icon' />English</div>
           <div className="item"><DarkModeOutlined className='icon' /></div>

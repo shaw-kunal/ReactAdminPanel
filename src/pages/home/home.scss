@@ -1,0 +1,14 @@
+.home {
+    display: flex;
+}
+
+.homeContainer {
+    flex: 6;
+
+    .homeWidget {
+        display: flex;
+        margin: 20px;
+        gap:10px;
+      
+    }
+}

@@ -1,0 +1,94 @@
+.sidebar {
+    flex: 1;
+    border-right: 0.5px solid rgb(234, 231, 231);
+    min-height: 100vh;
+    
+    .top {
+      display: flex;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+      .logo {
+        color: #6439ff;
+        font-weight: bold;
+      }
+    }
+    hr {
+      height: 0px;
+      border: 0.5px solid rgb(234, 231, 231);
+    }
+  
+    .center {
+      padding: 10px;
+      ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+  
+  
+        .title {
+          font-size: 12px;
+          margin: 15px 20px 5px 3px;
+  
+          color: gray;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          
+          cursor: pointer;
+          gap: 3px;
+          padding: 2px;
+          .icon {
+            color: #6439ff;
+          }
+  
+          &:hover {
+            background-color: #c58af9;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  
+    .option {
+      margin:20px;
+      display: flex;
+      justify-content: space-evenly;
+      .backgroundTitle
+      {
+          display: flex;
+          align-items: center;
+          .icon{
+              color:#6439ff ;
+  
+          }
+      }
+      .optionItem {
+          height: 20px;
+          width: 20px;
+          cursor: pointer;
+          border-radius: 3px;
+        
+          &:nth-child(2)
+          {
+              background-color: rgb(178, 166, 166);
+          }
+          &:nth-child(3)
+          {
+              background-color: black;
+          }
+  
+      }
+    }
+  }
+  
+  
+  
+  
+  
+  
