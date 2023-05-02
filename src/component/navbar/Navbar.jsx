@@ -1,5 +1,5 @@
 import { ChatBubbleOutlineOutlined, DarkModeOutlined, FullscreenExitOutlined, LanguageOutlined, ListOutlined, NotificationAddOutlined, NotificationsNoneOutlined, SearchOutlined } from '@mui/icons-material'
-import { Avatar, AvatarGroup, ListItemAvatar } from '@mui/material'
+import { Avatar, AvatarGroup, IconButton, ListItemAvatar } from '@mui/material'
 import React from 'react'
 import "./navbar.scss"
 import { Link } from 'react-router-dom'
@@ -10,19 +10,7 @@ const Navbar = () => {
       <div className="navbarWrapper">
 
 
-        <div className='pages'>
-          <div className='pageItem'>
-            <Link to="/" className='pageLink'>
-              <h3>Home</h3>
-              <div className='pageline'></div>
-            </Link>
-          </div>
-          <div className='pageItem'>
-            <Link to="/users" className='pageLink'>
-              <h3>users</h3>
-            </Link>
-          </div>
-        </div>
+
         <div className="search">
           <div className="searchfield">
             <input type="text" placeholder='search...' />
@@ -31,13 +19,13 @@ const Navbar = () => {
         </div>
 
         <div className="items">
-          <div className="item"><LanguageOutlined className='icon' />English</div>
+           <div className="item"><LanguageOutlined className='icon' />English</div>
           <div className="item"><DarkModeOutlined className='icon' /></div>
           <div className="item"><FullscreenExitOutlined className='icon' /></div>
           <div className="item"><ChatBubbleOutlineOutlined className='icon' />
             <div className="counter">2</div>
           </div>
-          <div className="item"><NotificationsNoneOutlined className='icon' />
+          <div className="item"><IconButton><NotificationsNoneOutlined className='icon' /></IconButton>
             <div className="counter">2</div>
           </div>
           <div className="item"><ListOutlined className='icon' /></div>
