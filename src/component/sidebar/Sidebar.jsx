@@ -1,9 +1,20 @@
-import { AccountBoxOutlined, AccountCircle, AllInboxOutlined, BorderColorOutlined, BugReportSharp, CloudUploadOutlined, ColorLens, Dashboard, EqualizerOutlined, ExitToAppOutlined, NotificationAddOutlined, PsychologyAltOutlined, SettingsApplications, ShoppingCartOutlined } from '@mui/icons-material'
+import { AccountBoxOutlined, AccountCircle, AllInboxOutlined, BorderColorOutlined, BugReportSharp, CloudUploadOutlined, ColorLens, Dashboard, EqualizerOutlined, ExitToAppOutlined, Login, LoginOutlined, LoginRounded, LoginTwoTone, NotificationAddOutlined, PsychologyAltOutlined, SettingsApplications, ShoppingCartOutlined } from '@mui/icons-material'
 import React from 'react'
 import "./sidebar.scss"
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { logout } from '../../redux/UserSlice'
+
+
+
+
 
 const Sidebar = () => {
+    
+    const dispatch = useDispatch();
+    const handleLogout=()=>{
+    dispatch(logout());
+    }
     return (
         <div className='sidebar'>
             <div className="top">
@@ -35,7 +46,10 @@ const Sidebar = () => {
                     <p className="title">USER</p>
 
                     <li><AccountBoxOutlined className='icon' /><span>Profile</span></li>
-                    <li><ExitToAppOutlined className='icon' /><span>Logout</span></li>
+                    <Link to="/login" className='link'>
+                        <li><LoginOutlined className='icon' /><span>Login</span></li>
+                    </Link>
+                    <li onClick={handleLogout}><ExitToAppOutlined className='icon' /><span>Logout</span></li>
                 </ul>
             </div>
             <hr />

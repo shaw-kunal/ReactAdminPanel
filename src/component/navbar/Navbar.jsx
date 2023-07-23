@@ -8,9 +8,6 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <div className="navbarWrapper">
-
-
-
         <div className="search">
           <div className="searchfield">
             <input type="text" placeholder='search...' />

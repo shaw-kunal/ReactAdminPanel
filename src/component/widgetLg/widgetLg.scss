@@ -12,16 +12,26 @@
     .widgetLgTable {
         width: 100%;
         border-spacing: 20px;
-
+        padding: 4px 0px;
+        
+       
     }
+     .widgetLgTr
+    {
+        margin: 70px;
+        padding: 30px;
+    }
+
 
     .widgetLgTh {
         text-align: left;
+        padding: 14px 0px;
+        // margin: 20px;
     }
 
     .widgetLgUser {
         display: flex;
-        gap: 10px;
+        gap: 20px;
         align-items: center;
         font-weight: 600;
 
@@ -35,11 +45,7 @@
     .widgetLgDate,.widgetLgAmount{
         font-weight: 300;
         color: grey;
-
     }
-
-
-
 }
 
 .widgetLgButton {

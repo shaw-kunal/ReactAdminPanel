@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./featuredInfo.scss"
 import { ArrowDownward, ArrowUpward } from '@mui/icons-material'
 
 const featuredInfo = () => {
+
+    const [income, setIncome] = useState([])
+    // useEffect
     return (
         <div className='featured'>
             <div className="featuredItem">
